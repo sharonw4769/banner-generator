@@ -8,6 +8,16 @@
     
     $(function() {
       
+      $('button').click(function(){
+        var name = $('#name').val();
+        var color = $('input[name="color"]:checked').val();
+        var food = $('#food').val();
+        var story = "Sam like green eggs and ham, and " + name + " likes " + color + " " + food + ".";
+        $('p').html(story);
+      });
+            $('button').click(function() {
+                $(this).css();
+            });
     });
     </script>
     <style>
@@ -18,16 +28,21 @@
         </style>
   </head>
   <body>
-  Name: <input type="text" name="name"><br>
+  Name: <input type="text" name="name" id="name"><br>
   Favorite color: <br>
   <input type="radio" name="color" value="red">Red<br>
   <input type="radio" name="color" value="yellow">Yellow<br>
-  <input type="radio" name="color">Green<br>
-  <input type="radio" name="color">Blue<br>
-  <input type="radio" name="color">Pink<br>
-  <input type="radio" name="color">Purple<br>
-  <input type="radio" name="color">Orange<br>
-  Favorite Food: <input type="text" name="food"><br><br>
+  <input type="radio" name="color" value="green">Green<br>
+  <input type="radio" name="color" value="blue">Blue<br>
+  <input type="radio" name="color" value="pink">Pink<br>
+  <input type="radio" name="color" value="purple">Purple<br>
+  <input type="radio" name="color" value="orange">Orange<br>
+  Favorite Food: <input type="text" name="food" id="food"><br><br>
   <button>CLICK HERE TO SEE WHAT HAPPENS!</button>
+  
+  <p>
+    
+  </p>
+  
   </body>
 </html>
