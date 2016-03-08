@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery Template</title>
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>
-    
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Template</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
     $(function() {
-      
-      $('button').click(function(){
+
+      $('button').click(function() {
         var name = $('#name').val();
         var color = $('input[name="color"]:checked').val();
         var food = $('#food').val();
         var story = "Sam like green eggs and ham, and " + name + " likes " + color + " " + food + ".";
         $('p').html(story);
       });
-            $('button').click(function() {
-                $(this).css();
-            });
+      $('color').click(function() {
+        $(this).css('color',color);
+
+      });
     });
-    </script>
-    <style>
-        body {
-            font-family: "Tahoma", Georgia, Serif;
-            font-size: 24px;
-        }
-        </style>
-  </head>
-  <body>
-  Name: <input type="text" name="name" id="name"><br>
-  Favorite color: <br>
-  <input type="radio" name="color" value="red">Red<br>
-  <input type="radio" name="color" value="yellow">Yellow<br>
-  <input type="radio" name="color" value="green">Green<br>
-  <input type="radio" name="color" value="blue">Blue<br>
-  <input type="radio" name="color" value="pink">Pink<br>
-  <input type="radio" name="color" value="purple">Purple<br>
-  <input type="radio" name="color" value="orange">Orange<br>
-  Favorite Food: <input type="text" name="food" id="food"><br><br>
+  </script>
+  <style>
+    body {
+      font-family: "Tahoma", Georgia, Serif;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  Name:
+  <input type="text" name="name" id="name">
+  <br> Favorite color:
+  <br>
+  <input type="radio" name="color" value="red">Red
+  <br>
+  <input type="radio" name="color" value="yellow">Yellow
+  <br>
+  <input type="radio" name="color" value="green">Green
+  <br>
+  <input type="radio" name="color" value="blue">Blue
+  <br>
+  <input type="radio" name="color" value="pink">Pink
+  <br>
+  <input type="radio" name="color" value="purple">Purple
+  <br>
+  <input type="radio" name="color" value="orange">Orange
+  <br> Favorite Food:
+  <input type="text" name="food" id="food">
+  <br>
   <button>CLICK HERE TO SEE WHAT HAPPENS!</button>
-  
+
   <p>
-    
+
   </p>
-  
-  </body>
+
+</body>
+
 </html>
