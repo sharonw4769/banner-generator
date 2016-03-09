@@ -15,10 +15,11 @@
         var story = "Sam like green eggs and ham, and " + name + " likes " + color + " " + food + ".";
         $('p').html(story);
       });
-      $('color').click(function() {
-        $(this).css('color',color);
-
-      });
+    
+      $('p').click(function(){
+        var color = $('input[name="color"]:checked').val();
+                $(this).css('color', color);
+            });
     });
   </script>
   <style>
