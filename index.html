@@ -7,7 +7,6 @@
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
     $(function() {
-
       $('button').click(function() {
         var name = $('#name').val();
         var color = $('input[name="color"]:checked').val();
@@ -20,6 +19,7 @@
         var color = $('input[name="color"]:checked').val();
                 $(this).css('color', color);
             });
+            
     });
   </script>
   <style>
@@ -30,15 +30,21 @@
     #banner {
       background-color: #d9d9d9;
       border: solid;
+      width: 900px;
+      height: 300px;
     }
     p {
       text-align: center;
-    }
+      font-size: 65px;
+      }
     #border {
       border: solid;
       width: 500px;
       height: 350px;
+
     }
+    body { 
+       background: linear-gradient(white, #009900);
   </style>
 </head>
 
@@ -66,7 +72,7 @@
   <br>
   <button>CLICK HERE TO SEE WHAT HAPPENS!</button>
   </div>
-  <h6>Then click the sentence to change color:</h6>
+  <h6>CLICK the sentence to change color:</h6>
   
 <div id="banner">
   <p>
