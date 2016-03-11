@@ -3,29 +3,30 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>jQuery Template</title>
+  <title>jQuery Banner Generator</title>
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
     $(function() {
-      $('#banner').hide()
+      $('#banner').hide() // banner box is hidden in the beginning 
+      // variables thats take user's input to form the story in the the p tag
       $('button').click(function() {
         var name = $('#name').val();
-        var color = $('input[name="color"]:checked').val();
+        var color = $('input[name="color"]:checked').val(); // getting inputs from a radio 
         var food = $('#food').val();
         var story = "Sam like green eggs and ham, and " + name + " likes " + color + " " + food + ".";
-        $('p').html(story);
-        
-        $('#banner').show(1000);
+        $('p').html(story); // the story shows up in the p tag when the button is clicked
+        $('#banner').show(1000); // banner is shown with the story when the button is clicked
       });
-    
+    // the p color changes depending on the user's radio input when the story is clicked 
       $('p').click(function(){
-        var color = $('input[name="color"]:checked').val();
-                $(this).css('color', color);
+        var color = $('input[name="color"]:checked').val(); // take which option from the radio is checked 
+                $(this).css('color', color); // changes that color into the selected radio 
             });
             
     });
   </script>
   <style>
+  /* style for the body, banner div, p tag, and border div */
     body {
       font-family: "Tahoma", Georgia, Serif;
       font-size: 24px;
@@ -52,9 +53,12 @@
 
 <body>
   <div id="border">
+    <!--user puts in their name-->
   Name:
   <input type="text" name="name" id="name">
-  <br> Favorite color:
+  <br> 
+  <!--select options for radio-->
+  Favorite color:
   <br>
   <input type="radio" name="color" value="red">Red
   <br>
@@ -69,7 +73,9 @@
   <input type="radio" name="color" value="purple">Purple
   <br>
   <input type="radio" name="color" value="orange">Orange
-  <br> Favorite Food:
+  <br> 
+  <!--user puts in their favorite food-->
+  Favorite Food:
   <input type="text" name="food" id="food">
   <br>
   <button>CLICK HERE TO SEE WHAT HAPPENS!</button>
@@ -77,6 +83,7 @@
   <h4>CLICK the sentence to change color:</h4>
   
 <div id="banner">
+  <!--box around the story -->
   <p>
 
   </p>
